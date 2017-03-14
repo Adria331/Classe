@@ -1,0 +1,19 @@
+<html>
+  <head>
+  <title>{{ author }} Waifus</title>
+  </head>
+<body>
+  <h1>Waifus de {{ author }}</h1>
+  {% if sobres %}
+  <ul>
+  {% for sobre in sobres %}
+  <li>
+  {{sobre.empresa.nom}} - {{ sobre.concept}} - {{ sobre.amount }}€
+  </li>
+  {% endfor %}
+  </ul>
+  {% else %}
+  <p>No ha rebut sobres.</p>
+  {% endif %}
+</body>
+</html>
